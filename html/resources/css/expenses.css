@@ -1,0 +1,31 @@
+@import 'main.css';
+
+table {
+	width: 80%;
+	margin: 0;
+	background: #d8e5f3;
+	border: 1px solid #1e3f62;
+	border-collapse: collapse;
+	color:  #3366cc;
+}
+ 
+td, th {
+	border-bottom: 1px solid  #3c7dc3;
+	padding: 6px 16px;
+	text-align: left;
+}
+ 
+th {
+	background: #4f8ac9;
+	color: #ffffff;
+}
+ 
+caption {
+	background: #244b75;
+	color: #ffffff;
+	margin: 0;
+	border: 1px solid #3c7dc3;
+	border-bottom: none;
+	padding: 6px 16px;
+	font-weight: bold;
+}

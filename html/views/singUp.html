@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Sing Up</title>
+	<link rel="stylesheet" href="../resources/css/singUp.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body class="site">
+	<header>
+		<h1>Sing Up</h1>
+		
+	</header>
+	<main class="site-content">
+		<nav class="custom-nav">
+			<ul>
+				<li><a href="toDoList.html">Todo list</a></li>
+				<li><a href="expenses.html">Expenses</a></li>
+				<li><a href="media.html">Media</a></li>
+				<li><a href="singUp.html">Form</a></li>
+			</ul>
+		</nav>
+		<content>
+			<form>
+				<label>Name: </label>
+				<input type="text" id="txt-name" name="fname" placeholder="Write your Name" required autofocus>
+				<label>Last Name: </label>
+				<input type="text"  id="txt-last" name="lname" placeholder="Write your Last Name" required autofocus>
+				<label>Email: </label>
+				<input  type="email" id="txt-email" name="email" placeholder="Write your email" required autofocus>
+				<label>Birthday: </label>
+				<input type="date" id="txt-date" name="date" required autofocus>
+				<label >Your Favorite Sport: </label>
+				<select id="slct-sport" name="sport" required>
+					<option value="">Please select a sport</option>
+					<option value="aerobics">Aerobics</option>
+					<option value="basketball">Basketball</option>
+					<option value="cycling">Cycling</option>
+					<option value="dancing">Dancing</option>
+					<option value="football">Football</option>
+					<option value="swimming">Swimming</option>
+				</select>
+				<label>Your Bio: </label><br/>
+				<textarea id="txt-bio" name="bio" required></textarea>
+
+				<button onclick="save()">Save</button>
+				<button onclick="clearFunc()">Clear</button>
+			</form>
+		</content>
+		</main>
+	<footer>
+		<script src="../resources/js/singUp.js" ></script>
+		
+	</footer>
+</body>
+</html>

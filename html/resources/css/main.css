@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: helvetica, sans-serif;
+}
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
+h1 {
+    color: #4f8ac9;
+    padding: 20px;
+}
+
+.menu-index {
+    background-color: #f1f1f1;
+}
+
+nav, ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+   
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #4caf50;
+    color: #ffffff;
+
+}
+
+content {
+    margin-left: 15%;
+	padding:1px 16px;
+	width: 85%;
+	position: fixed;
+}
+
+
+
+
+
+

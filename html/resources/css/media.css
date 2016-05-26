@@ -1,0 +1,48 @@
+@import 'main.css';
+
+
+main {
+	width: 50%;
+	
+}
+
+#audio {
+	background: #ffffff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	
+	margin-bottom: 15px;
+}
+
+div.polaroid {
+    
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 15px;
+
+}
+
+img {
+	width: 100%
+}
+
+audio{
+	width: 100%
+}
+
+video {
+	width: 100%
+}
+
+div.container {
+   	text-align: center;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: #f2f2f2;
+}
+
+content {
+    margin-left: 15%;
+	padding:1px 16px;
+	width: 50%;
+	position: absolute;
+}
