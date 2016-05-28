@@ -22,15 +22,15 @@
 		</nav>
 		<content>
 			<form>
-				<label>Name: </label>
+				<label for="txt-name">Name: </label>
 				<input type="text" id="txt-name" name="fname" placeholder="Write your Name" required autofocus>
-				<label>Last Name: </label>
+				<label for="txt-last">Last Name: </label>
 				<input type="text"  id="txt-last" name="lname" placeholder="Write your Last Name" required autofocus>
-				<label>Email: </label>
+				<label for="txt-email">Email: </label>
 				<input  type="email" id="txt-email" name="email" placeholder="Write your email" required autofocus>
-				<label>Birthday: </label>
+				<label for="txt-date">Birthday: </label>
 				<input type="date" id="txt-date" name="date" required autofocus>
-				<label >Your Favorite Sport: </label>
+				<label for="slct-spor">Your Favorite Sport: </label>
 				<select id="slct-sport" name="sport" required>
 					<option value="">Please select a sport</option>
 					<option value="aerobics">Aerobics</option>
@@ -40,7 +40,7 @@
 					<option value="football">Football</option>
 					<option value="swimming">Swimming</option>
 				</select>
-				<label>Your Bio: </label><br/>
+				<label for="txt-bio">Your Bio: </label><br/>
 				<textarea id="txt-bio" name="bio" required></textarea>
 
 				<button onclick="save()">Save</button>

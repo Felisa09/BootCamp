@@ -1,26 +1,5 @@
 @import 'main.css';
 
-/*body {
-	margin: 0;
-	padding: 5px;
-	font-family: helvetica, sans-serif;
-
-}
-
-h1 {
-	color:  #b300b3;
-	text-align: center;
-}
-li {
-	display: block;
-}
-
-li a {
-	color: #ffffff;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}*/
 .list {
 	color: #4f8ac9;
 	float: none;

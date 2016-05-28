@@ -1,0 +1,95 @@
+@import "normalize.css"
+
+body{
+	font-family: helvetica, sans-serif;
+}
+
+.container {
+	background-color: #660033;
+	width: 50%;
+	margin: 0 auto;
+	padding: 20px;
+	color: #fff;
+	text-align: center;
+	border-radius: 10px;
+
+
+}
+.header {
+	background-color: #b30059;
+	border-radius: 10px;
+	font-size: 46px;
+}
+
+.main {
+	display: -webkit-box;
+	border-radius: 10px;
+}
+
+.navigation {
+	list-style-type: none;
+	width: 20%;
+	background-color: #b30059;
+	margin-right: 10px; 
+	border-radius: 10px;
+	font-size: 12px;
+}
+
+.content {
+	background-color: #b30059;
+	width: 58%;
+	border-radius: 10px;
+	font-size: 14px;
+}
+
+.section-in {
+	background-color: #df9fbe;
+	border-radius: 10px;
+	width: 80%;
+	margin: 0 auto;
+
+}
+.article {
+	height: 100px;
+	border-radius: 10px;
+
+}
+
+.side-bar {
+	background-color: #b30059;
+	width: 20%;
+	margin-left: 10px; 
+	border-radius: 10px;
+	font-size: 10px;
+}
+
+.footer {
+	background-color: #b30059;
+	border-radius: 10px;
+	font-size: 10px;
+}
+h3, h4, p{
+	padding: 10px;
+}
+[class*=a]:hover {
+	background-color: #008080;
+}
+
+[class$=r]:hover {
+	background-color:  #e6e600; 
+}
+
+[class$=r] {
+	font-weight: bolder;
+}
+.oh-no-inline-styles{
+	margin: 10px auto;
+	padding: 20px;
+	width: 100px;
+	height: 100px;
+	background-color: red;
+
+}
+[class$=s]{
+	background-color: green !important;
+}

@@ -241,6 +241,10 @@ nav a:hover {
         float: left;
         width: 45%;
     }
+	.main .section {
+        float: left;
+        width: 45%;
+    }
 
     .main aside {
         float: right;
