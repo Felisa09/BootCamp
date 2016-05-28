@@ -5,71 +5,68 @@ body{
 }
 
 .container {
-	background-color: #660033;
+	background-color: #80002a;
 	width: 50%;
-	margin: 0 auto;
-	padding: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 1%;
 	color: #fff;
 	text-align: center;
 	border-radius: 10px;
 
-
 }
-.header {
-	background-color: #b30059;
-	border-radius: 10px;
-	font-size: 46px;
+
+.header, .footer {
+	background-color: #cc0044;
+	padding: 5px;
+	border-radius: 5px;
 }
 
 .main {
-	display: -webkit-box;
-	border-radius: 10px;
+	display: flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;      /* TWEENER - IE 10 */
+  	display: -webkit-flex;     /* NEW - Chrome */
+  	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
 }
 
-.navigation {
-	list-style-type: none;
-	width: 20%;
-	background-color: #b30059;
-	margin-right: 10px; 
-	border-radius: 10px;
-	font-size: 12px;
+.navigator{
+	background-color: #cc0044;
+	border-radius: 5px;
+	width: 25%
+}
+li {
+	list-style: none;
+	padding-top: 10px;
 }
 
-.content {
-	background-color: #b30059;
-	width: 58%;
-	border-radius: 10px;
-	font-size: 14px;
-}
-
-.section-in {
-	background-color: #df9fbe;
-	border-radius: 10px;
-	width: 80%;
+section {
+	background-color: #cc0044;
+	border-radius: 5px;
+	width: 48%;
 	margin: 0 auto;
-
-}
-.article {
-	height: 100px;
-	border-radius: 10px;
+	
 
 }
 
-.side-bar {
-	background-color: #b30059;
-	width: 20%;
-	margin-left: 10px; 
-	border-radius: 10px;
-	font-size: 10px;
+.section {
+	background-color: #ff3377;
+	border-radius: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
-.footer {
-	background-color: #b30059;
-	border-radius: 10px;
-	font-size: 10px;
+article {
+	padding-bottom: 20px;
 }
-h3, h4, p{
-	padding: 10px;
+
+.sidebar {
+	background-color: #cc0044;
+	border-radius: 5px;
+	width: 25%	
 }
 [class*=a]:hover {
 	background-color: #008080;
