@@ -1,0 +1,89 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-size: 16px;
+	background-image: url("hijo.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	color: white;
+}
+img {
+	border: 4px solid white;
+}
+/*header img {
+	width: 600px;
+	margin: 20px;
+}*/
+header {
+	background-color: red;
+	border: 4px solid white;
+	width: 48%;
+	height: 300px;
+	margin: 20px;
+	
+}
+
+h1 {
+	font-size: 16rem;
+	line-height: 207px;
+}
+h2 {
+	font-size: 2.6rem;
+	color: black;
+	padding-left: 15px;
+	line-height: 135px;
+}
+.main {
+	font-weight: bold;
+	margin: 20px;
+}
+
+#line1 {
+	font-size: 5rem;
+}
+#line2 {
+	font-size: 3.5rem;
+	text-transform: uppercase;
+}
+
+#line3 {
+	font-size: 8.5rem;
+	text-transform: uppercase;
+}
+
+#line4 {
+	font-size: 4.5rem;
+	text-transform: uppercase;
+}
+#line5 {
+	font-size: 3.4rem;
+}
+footer {
+	height: 350px;
+	background-color: red;
+	margin-top: 250px;
+}
+footer p {
+	text-align: center;
+	font-size: 2.8rem;
+	text-transform: uppercase;
+	padding-top: 50px;
+}
+
+.photo-footer img{
+	height: 400px;
+	width: 300px;
+	margin-top: -70px;
+}
+.photo-left {
+	float: left;
+	margin-left: 20px;
+}
+.photo-right {
+	float: right;
+	margin-right: 20px;
+}
+

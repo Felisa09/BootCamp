@@ -1,0 +1,51 @@
+body {
+	font-size: 16px;
+	width: 81%;
+	margin: 0 auto;
+	background-color: black;
+}
+header {
+	font-size: 3rem;
+	color: white;
+	text-align: center;
+}
+
+.img-content {
+	position: absolute;
+	transition: opacity 1s ease-in-out;
+}
+.img-content:hover {
+	opacity: 0;
+}
+img {
+	width: 399px;
+	height: 300px;
+	/*position: absolute;
+	transition: opacity 1s ease-in-out;*/
+}
+
+
+p {
+	font-size: 2rem;
+	color: yellow;
+	text-align: center;
+}
+.content {
+	
+	width: 399px;
+	height: 300px;
+	margin: 0 auto;
+}
+.box {
+	display: -webkit-inline-box;
+
+}
+.main {
+
+}
+
+footer p {
+	color: yellow;
+	font-size: 1.5rem;
+	padding-top: 10px;
+}
