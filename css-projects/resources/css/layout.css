@@ -83,13 +83,14 @@ h4 {
 	color: #ffb3d1;
 }
 .footer-l {
-	position:fixed;
-   	left:0px;
-   	bottom:0px;
+	position: fixed;
+   	left: 0p;
+   	bottom: 0;
    	font-variant: small-caps;
-	width:40%;
+	width: 37%;
 	display: -webkit-inline-box; 
 	background-color: #fff; 
+
 }
 .magazine{
 	margin-left: 80px;
