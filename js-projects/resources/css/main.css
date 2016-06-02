@@ -1,0 +1,9 @@
+@import "normalize.css";
+
+.main {
+	text-align: center;
+}
+
+#gretting-section {
+	opacity: 0;
+}
