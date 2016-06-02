@@ -28,6 +28,7 @@ document.getElementById("btn-joke").addEventListener("click", function(){
 			document.getElementById("norris-jokes").innerHTML = data.value.joke;
 	    }	
 	};
+	
 	//6.2.3 Open a channel comunication specifing the http method and url of the rest service
 	xhr.open("Get","http://api.icndb.com/jokes/random");
 	//6.2.4 Send the request

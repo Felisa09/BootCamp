@@ -4,10 +4,9 @@ body {
 	font-size: 16px;
 }
 .container {
-	font-size: 16px;
+	font-size: 1rem;
 	margin: 0 auto;
 	text-align: center;
-	width: 80%;
 }
 
 h1 {
@@ -54,7 +53,7 @@ h1 {
 	color: #fff;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 500px) {
 	.container {
 	font-size: 16px;
 	margin: 0 auto;
