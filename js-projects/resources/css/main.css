@@ -1,107 +1,58 @@
 body {
-	background-color: #00ace6;
-	color: #fff;
-	font-size: 16px;
+    margin: 0;
+    font-family: helvetica, sans-serif;
 }
-.container {
-	font-size: 1rem;
-	margin: 0 auto;
-	text-align: center;
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
+.site-content {
+  flex: 1;
+}
 h1 {
-	font-family: 'Rock Salt', cursive;
-	padding-top: 30px;
-	font-size: 2rem;
+    color: #4f8ac9;
+    padding: 20px;
 }
 
-#norris-jokes {
-	width: 450px;
-	height: 150px;
-	border-radius: 5px;
-	margin: 10px auto;
-	padding: 20px 30px;
-	font-size: 1.3rem;
-	background-color: #ff8533;
-}
-/*3. Add a hidden section with the following text inside: "Hello world".*/
-/*3.2 Add opacity to be hidden*/
-#greeting-section {
-	opacity: 0;
+.menu-index {
+    background-color: #f1f1f1;
 }
 
-/*4.5 Make keyframes that tell the start state and the end state of our object */ 
-@keyframes fadeIn { 
-	from { opacity:0; } to { opacity:1; } 
+nav, ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+   
+    position: fixed;
+    height: 100%;
+    overflow: auto;
 }
 
-/*4.6 Add style to the asigned class */
-.show {
-	animation:fadeIn ease-in 1;
-	animation-fill-mode:forwards;
-	animation-duration:1s;
-}
-#btn-joke {
-	border-radius: 4px;
-	margin-top: 15px;
-	font-size: 1rem;
-	padding: 5px;
-
-}
-#btn-joke:hover{
-	background-color: #ff8533;
-	color: #fff;
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
 }
 
-@media (max-width: 500px) {
-	.container {
-	font-size: 16px;
-	margin: 0 auto;
-	text-align: center;
-	width: 80%;
-}
-
-h1 {
-	font-family: 'Rock Salt', cursive;
-	padding-top: 30px;
-	font-size: 2rem;
-}
-
-#norris-jokes {
-	width: 300px;
-	height: 150px;
-	border-radius: 5px;
-	margin: 10px auto;
-	padding: 20px 30px;
-	font-size: 1.1rem;
-	background-color: #ff8533;
-}
-/*3. Add a hidden section with the following text inside: "Hello world".*/
-/*3.2 Add opacity to be hidden*/
-#greeting-section {
-	opacity: 0;
-}
-
-/*4.5 Make keyframes that tell the start state and the end state of our object */ 
-@keyframes fadeIn { 
-	from { opacity:0; } to { opacity:1; } 
-}
-
-/*4.6 Add style to the asigned class */
-.show {
-	animation:fadeIn ease-in 1;
-	animation-fill-mode:forwards;
-	animation-duration:1s;
-}
-#btn-joke {
-	border-radius: 4px;
-	margin-top: 15px;
-	font-size: .8rem;
-	padding: 5px;
+li a:hover {
+    background-color: #4caf50;
+    color: #ffffff;
 
 }
-#btn-joke:hover{
-	background-color: #ff8533;
-	color: #fff;
+
+content {
+    margin-left: 15%;
+	padding:1px 16px;
+	width: 85%;
+	position: fixed;
 }
-}
+
+
+
+
+
+
