@@ -1,25 +1,30 @@
+<!--1. Open your IDE, create a new file text, save it as index.html. Add the correct doctype, and a few tags with random content.-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Practice</title>
+	<title>Get Joke</title>
+	<!--2. Add a stylesheet to the index.html. Use the stylesheet to center the text of all section elements of the page.-->
 	<link rel="stylesheet" href="../resources/css/main.css">
+	<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div class="main">
-		<section id="gretting-section">
-			<h1>Hello World</h1>
+	<div class="container">
+		<!--3. Add a hidden section with the following text inside: "Hello world".-->
+		<!--3.1 Add a Section with an Id.-->
+		<section id="greeting-section">
+			<h1>Hello World!</h1>
 		</section>
-		<section id="joke">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim adminim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderitin voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 	officiadeserunt mollit anim id est laborum.</p>
+		<section>
+			<p id="norris-jokes">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+			</p>
 		</section>
-		<button onclick="my-function()">Click me</button>
+		<!--5. Add a button below the section to your index.html.-->
+		<button id="btn-joke">Get Joke</button>
 	</div>
-
-	<script type="text/javascript"  src="http://code.jquery.com/jquery-latest.js"></script>
-	<script type="text/javascript"  src="../resources/js/main.js"></script>
+	<!--4. When the page has finished loading the section must fade in. Hint: Use JavaScript, Browser Events, and CSS3-->
+	<!--4.1 Link my js file-->
+	<script type="text/javascript" src="../resources/js/main.js"></script>
 </body>
 </html>
-	
-	
-				
