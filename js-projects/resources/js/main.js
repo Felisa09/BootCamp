@@ -1,4 +1,5 @@
 "use strict";
+
 //4. When the page has finished loading the section must fade in. Hint: Use JavaScript, Browser Events, and CSS3
 //4.2 Set a function to the event onload of window object
 window.onload = function (){
