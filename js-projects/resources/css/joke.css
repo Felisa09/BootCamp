@@ -8,6 +8,16 @@ body {
 	margin: 0 auto;
 	text-align: center;
 	width: 80%;
+	display: flex;
+}
+
+aside {
+	width: 50%;
+	padding-top: 10%;
+}
+
+article {
+	width: 50%
 }
 
 h1 {
@@ -17,7 +27,7 @@ h1 {
 }
 .norris-section {
 	background-color: #ff8533;
-	width: 450px;
+	width: 80%;
 	height: 150px;
 	border-radius: 5px;
 	margin: 10px auto;

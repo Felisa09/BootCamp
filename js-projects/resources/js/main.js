@@ -11,6 +11,20 @@ window.onload = function (){
  	let sectionHello = document.getElementById("greeting-section");
  	//4.4 add a css class to my section-hidden Object  
  	sectionHello.classList.add("show");
+
+	let parametersData = ["q=JavaScript"];
+	let configGitRepos = new Config("Get", "https://api.github.com/search/repositories", parametersData);
+ 	let promiseGitRepos = ajaxRequest(configGitRepos);
+ 	promiseGitRepos.then(
+		function(data){
+			let dataJson = JSON.parse(data);
+			console.log(dataJson);
+		}
+	).catch(
+		function(data) {
+	    	console.log(data);
+		}
+	);
  };
 
 /*6. Attach a click event to the created button which calls a function 
@@ -22,8 +36,7 @@ buttonJoke = document.getElementById("btn-joke");
 buttonJoke.addEventListener("click", function(){
 	let httpMethod = "Get";
 	let url = "http://api.icndb.com/jokes/random";
-	let parametersData = ["q=JavaScript"];
-	let configJoke = new Config(httpMethod, url, parametersData);
+	let configJoke = new Config(httpMethod, url);
  	let promiseJoke = ajaxRequest(configJoke);
 
  	let norrisSection = document.getElementById("norris-jokes");
@@ -71,6 +84,7 @@ buttonError.addEventListener("click", function () {
 });
 
 //7.2 Create a config object
+//9.2 set parametersData [optional] to my function
 function Config (httpMethod, url, parametersData) {
 	this.httpMethod = httpMethod;
 	this.url = url;
@@ -87,8 +101,7 @@ function Config (httpMethod, url, parametersData) {
 				uri += "&" + this.parametersData[i];
 			}
 		}
-		
-		console.log("completeCall= " + uri);
+		console.log(uri);
 		return uri;
 	}
 };
@@ -102,9 +115,8 @@ function ajaxRequest (config) {
 			//6.2 Get a response with XMLHttpRequest
 			//6.2.1 Create an object XMLHttpRequest
 			let xhr = new XMLHttpRequest();
-			config.completeCall();
 			//6.2.3 Open a channel comunication specifing the http method and url of the rest service
-			xhr.open(config.httpMethod, config.url);
+			xhr.open(config.httpMethod, config.completeCall());
 			//6.2.4 Send the request
 			xhr.send();
 
