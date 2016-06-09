@@ -20,8 +20,29 @@ window.onload = function (){
 buttonJoke = document.getElementById("btn-joke");
 //6.2 Attach a click event to the created button which calls a function
 buttonJoke.addEventListener("click", function(){
-	let urlJokes = "http://api.icndb.com/jokes/random";
- 	ajaxRequest(urlJokes);
+	let httpMethod = "Get";
+	let url = "http://api.icndb.com/jokes/random";
+	let parametersData = ["q=JavaScript"];
+	let configJoke = new Config(httpMethod, url, parametersData);
+ 	let promiseJoke = ajaxRequest(configJoke);
+
+ 	let norrisSection = document.getElementById("norris-jokes");
+ 	promiseJoke.then(
+		function(data){
+			let dataJson = JSON.parse(data);
+			norrisSection.innerHTML = dataJson.value.joke;
+			//If the section contains error class, then remove it.
+			if (norrisSection.classList.contains("error")) {
+				norrisSection.classList.remove("error");
+			}
+		}
+	).catch(
+		function(data) {
+	    	norrisSection.innerHTML = "Ooooops a wild error apperars!" + data;
+	    	norrisSection.classList.add("error");
+		}
+	);
+
 });
 
 //8. Show section content in red when a server error occurs.
@@ -29,42 +50,143 @@ buttonJoke.addEventListener("click", function(){
 buttonError = document.getElementById("btn-error");
 //8.2 Add the error-event to the button. 
 buttonError.addEventListener("click", function () {
-	let urlError = "http://error.come";
-	ajaxRequest(urlError);
-});
-
-
-//7.From the previous exercise create a reusable function to perform AJAX calls. The function must accept a config object and return an ES6 Promise.
-//7.1 Add a reusable function to perform AJAX calls. 
-function ajaxRequest (url) {
-	//6.2 Get a response with XMLHttpRequest
-	//6.2.1 Create an object XMLHttpRequest
-	let xhr = new XMLHttpRequest();
-	
-	//6.2.2 Set a function to the event of xhr object 
-	xhr.onreadystatechange = function() {
-		let norrisSection = document.getElementById("norris-jokes");
-		
-		//6.2.5 if the request was success
-	    if (xhr.readyState == 4 && xhr.status == 200) {
-	    	let data = JSON.parse(xhr.responseText);
-			norrisSection.innerHTML = data.value.joke;
+	let configError = new Config("Get","http://error.come");
+	let promiseError = ajaxRequest(configError);
+	let norrisSection = document.getElementById("norris-jokes");
+	promiseError.then(
+		function(data){
+			let dataJson = JSON.parse(data);
+			norrisSection.innerHTML = dataJson.value.joke;
 			//If the section contains error class, then remove it.
 			if (norrisSection.classList.contains("error")) {
 				norrisSection.classList.remove("error");
 			}
-	    }
-	    //If the request failed.	
-	  	else if (xhr.readyState == 4 && xhr.status == 0) {
-	    	norrisSection.innerHTML = "Ooooops a wild error apperars!";
+		}
+	).catch(
+		function(data) {
+	    	norrisSection.innerHTML = "Ooooops a wild error apperars!" + data;
 	    	norrisSection.classList.add("error");
-	    }
+		}
+	);
+});
 
-	};
-	
-	//6.2.3 Open a channel comunication specifing the http method and url of the rest service
-	xhr.open("Get",url);
-	//6.2.4 Send the request
-	xhr.send();
+//7.2 Create a config object
+function Config (httpMethod, url, parametersData) {
+	this.httpMethod = httpMethod;
+	this.url = url;
+	this.parametersData = parametersData;
+
+	this.completeCall = function () {
+		let uri = this.url;
+		//if the parameters data at least has one parameter then
+		if (this.parametersData != null && this.parametersData.length > 0) {
+			// i do concat
+			uri += "?" + this.parametersData[0];
+			//an later i add the another parameters
+			for (var i =  1; i < this.parametersData.length; i++) {
+				uri += "&" + this.parametersData[i];
+			}
+		}
+		
+		console.log("completeCall= " + uri);
+		return uri;
+	}
 };
+
+//7.From the previous exercise create a reusable function to perform AJAX calls. The function must accept a config object and return an ES6 Promise.
+//7.1 Add a reusable function to perform AJAX calls. 
+function ajaxRequest (config) {
+
+	let myPromise = new Promise(
+		function(resolve, reject){
+			//6.2 Get a response with XMLHttpRequest
+			//6.2.1 Create an object XMLHttpRequest
+			let xhr = new XMLHttpRequest();
+			config.completeCall();
+			//6.2.3 Open a channel comunication specifing the http method and url of the rest service
+			xhr.open(config.httpMethod, config.url);
+			//6.2.4 Send the request
+			xhr.send();
+
+			//6.2.2 Set a function to the event of xhr object 
+			xhr.onload = function() {				
+				//6.2.5 if the request was success
+			    if (this.readyState == 4 && this.status == 200) {
+			    	resolve(this.responseText);
+			    }
+			};
+
+			//If the request failed.
+			xhr.onerror = function () {
+				//reject(xhr.status + " : " + xhr.statusText);
+				reject(this.responseText);
+			}; 
+		}
+	);
+	//7.3 return a ES6 Promise
+	return myPromise;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

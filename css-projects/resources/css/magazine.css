@@ -43,14 +43,20 @@ h1 {
 	line-height: 207px;
 	font-family: 'Roboto', sans-serif;
 }
+h1::before {
+	content: "!";
+  	text-align: right;
+  	float: left;
+  	transform: rotate(-180deg);
+}
 #tittle-header {
 	float: left;
 	padding-top: 39px;
 }
-#mark-header {
+/*#mark-header {
 	float: left;
 	
-}
+}*/
 
 .main {
 	font-weight: bold;
